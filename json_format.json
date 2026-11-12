@@ -1,0 +1,17 @@
+{
+  "id": u32,
+  "title": Srting,
+  "descripction": String,
+  "ingredients":{
+    "ingredient_1": String,
+    "ingredient_2": String,
+    "ingredient_3": String,
+    ...
+  },
+  "steps":{
+    "step_1": String,
+    "step_2": String,
+    "step_3": String,
+    ...
+  }
+}

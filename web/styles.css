@@ -1,0 +1,301 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Open Sans — fuente variable (pesos 300–800) */
+.noto-serif-display {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; /* cámbialo entre 300 y 800, o usa .noto-serif-display--bold */
+  font-style: normal;
+}
+
+.noto-serif-display--light {
+  font-weight: 300;
+}
+
+.noto-serif-display--bold {
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  background-color: #EBE2CC;
+  font-family: "Open Sans", sans-serif;
+}
+
+#hero{
+  display: flex;
+  background-image: url(./set-bakery-pastries-wooden-table-alt.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2rem);
+}
+
+#general{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipeTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  padding: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+#content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  justify-items: center;
+  width: 100%;
+  background-color: #EBE2CC;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1.5rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+#form_link{
+  display: flex;
+  background-color: white;
+  border: none;
+  border-radius: 100%;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: clamp(1rem, 4vw, 2rem);
+  top: clamp(1rem, 4vw, 2rem);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#back_link{
+  position: absolute;
+  left: clamp(1rem, 4vw, 2rem);
+  top: clamp(1rem, 4vw, 2rem);
+  padding: 0.5rem 0.9rem;
+  border: none;
+  border-radius: 999px;
+  background-color: white;
+  font: inherit;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#header{
+  width: 100%;
+  height: clamp(150px, 25vh, 340px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+}
+
+#title{
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+#title h1{
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.15;
+}
+
+#search {
+  display: block;
+  width: min(100%, 420px);
+  margin: 0.9rem auto 0;
+  padding: 0.65rem 1.1rem;
+  border: none;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.94);
+  color: #222;
+  font: inherit;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+#search::placeholder {
+  color: #6b6b6b;
+}
+
+#search:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.75);
+  outline-offset: 2px;
+}
+
+.contentMessage {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin: 0;
+  font-weight: 600;
+}
+
+.markdown {
+  width: min(100%, 800px);
+  line-height: 1.7;
+  padding: clamp(1rem, 3vw, 1.5rem) clamp(1rem, 4vw, 1.5rem) 3rem;
+}
+
+form {
+  width: min(calc(100% - 2rem), 560px);
+  margin: clamp(1.5rem, 5vw, 3rem) auto;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  background-color: #EBE2CC;
+  border-radius: 12px;
+}
+
+form > label {
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+form > input {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #c9c2ad;
+  border-radius: 8px;
+  font: inherit;
+}
+
+form > button[type="submit"] {
+  margin-top: 1.25rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6c8c5a;
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  margin: 1.2em 0 0.4em;
+  line-height: 1.25;
+}
+
+.markdown p {
+  margin: 0 0 1em;
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.5rem;
+  margin: 0 0 1em;
+}
+
+.markdown li {
+  margin-bottom: 0.35em;
+}
+
+.markdown a {
+  color: #4a6fa5;
+}
+
+.markdown code {
+  background: #e8e3d5;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.markdown pre {
+  background: #2b2b2b;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.85em;
+}
+
+.markdown blockquote {
+  border-left: 4px solid #c9c2ad;
+  margin: 0 0 1em;
+  padding-left: 1rem;
+  color: #555;
+}
+
+.markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.markdown table {
+  border-collapse: collapse;
+  margin: 0 0 1em;
+}
+
+.markdown th,
+.markdown td {
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
+.markdown hr {
+  border: none;
+  border-top: 1px solid #d8d2bf;
+  margin: 1.5rem 0;
+}
+
+.markdown{
+  background-color: white;
+}
+
+.recipeTag {
+  cursor: pointer;
+}
+
+.recipeTag__hint {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #6c8c5a;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  #header {
+    height: clamp(140px, 22vh, 220px);
+  }
+
+  #title h1 {
+    font-size: clamp(1.5rem, 8vw, 2.2rem);
+  }
+
+  .markdown {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
